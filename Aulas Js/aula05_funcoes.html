@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+    <script>
+
+        // Literal
+        function somar(n1, n2) {
+            return n1 + n2;
+        }
+
+        var resultado = somar(10, 20);
+        console.log('Resultado:', resultado);
+
+        somar.teste = 'Propriedade da função';
+
+        console.log(somar.teste);
+
+        var teste = function(f) {
+            f()
+        };
+
+        teste(function(){
+            console.log('Função')
+        });
+
+        console.log('-----------------------');
+
+        var x = 0;
+
+        function mostraX() {
+            var x = 10; // Escopo local
+            console.log('Mostra x dentro: ', x)
+        }
+
+        mostraX();
+
+        console.log('Mostra x fora: ', x);
+
+        // IIFE
+        (function() {
+            'use strict'
+            var isValid = false;
+            console.log(isValid);
+
+            function somar(arr) {
+                var result = 0;
+                var x = 0;
+
+                while(arguments[x]) {
+                    result += arguments[x]
+                    //count += arguments[x];
+                    x++;
+                }
+
+                console.log('Resultado: ', result);
+            }
+
+            somar(10, 20, 20, 30);
+        })();
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+</body>
+</html>
