@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - JS</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Desafio - JS</h1>
+
+        <p class="paragrafo-js">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias temporibus in praesentium beatae minus atque
+            quod quibusdam nobis a accusamus qui labore quasi, ut nisi tempora ducimus sequi</p>
+
+        <p class="paragrafo-js">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias temporibus in praesentium beatae minus atque
+            quod quibusdam nobis a accusamus qui labore quasi, ut nisi tempora ducimus sequi</p>
+
+        <p class="paragrafo-js">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias temporibus in praesentium beatae minus atque
+            quod quibusdam nobis a accusamus qui labore quasi, ut nisi tempora ducimus sequi</p>
+
+        <button onclick="modificarParagrafos()">Hackear</button>
+    </div>
+
+    <script>
+        paragrafos = document.querySelectorAll('.paragrafo-js');
+
+        function modificarParagrafos() {
+            var x = 0;
+            while(paragrafos[x]) {
+                paragrafos[x].innerHTML = 'Conteúdo hackeado por <strong>Gustavinho ᕦ( ͡° ͜ʖ ͡°)ᕤ<strong>';
+                x++;
+            }
+        }
+    </script>
+</body>
+
+</html>
