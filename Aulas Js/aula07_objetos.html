@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos - JS</title>
+</head>
+
+<body>
+    <div>
+        <h1>Curso de Javascript Completo 2022</h1>
+    </div>
+
+    <script>
+        var x = 0;
+
+        function mudaX(x) {
+            console.log('X: ', x);
+        }
+
+        mudaX(10);
+
+        console.log('X: ', x);
+
+        console.log('-------');
+
+        var caneta = {
+            cor: 'red',
+            mudarCor: function(cor) {
+                this.cor = cor;
+            }
+        }
+
+        console.log('Antes de mudar de cor -> ', caneta)
+
+        caneta.mudarCor('green');
+
+        console.log('Após mudar de cor -> ', caneta);
+    </script>
+</body>
+
+</html>
