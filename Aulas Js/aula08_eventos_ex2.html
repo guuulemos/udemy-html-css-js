@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - JS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso JS Completo 2022</h1>
+
+    </div>
+
+   <form action="#">
+       <label for="txtUser">Usuário</label>
+        <input type="text" id="txtUser" name="user"><br>
+        <label for="txtPass">Senha</label>
+        <input type="password" id="txtPass" name="pass"><br>
+        <button type="submit" id="btnEntrar">Entrar</button>
+   </form>
+
+    <script>
+        (function(){
+            'use strict';
+            var $form = document.querySelector('form');
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            var $btnEntrar = document.getElementById('btnEntrar');
+
+            $form.addEventListener('submit', function(e) {
+                if(!$txtUser.value || !$txtPass.value) {
+                    alert('Preencha todos os campos!');
+                    e.preventDefault();
+                };
+            })
+        })()
+    </script>
+</body>
+</html>
